@@ -1,0 +1,101 @@
+{
+  "Body": {
+    "value": {
+      "fontFamily": "Poppins",
+      "fontWeight": 400,
+      "fontSize": 14,
+      "lineHeightPx": 21,
+      "letterSpacing": 0
+    },
+    "$type": "typography",
+    "type": "typography"
+  },
+  "Section_Inner_Title": {
+    "value": {
+      "fontFamily": "Poppins",
+      "fontWeight": 600,
+      "fontSize": 16,
+      "lineHeightPx": 20.799999237060547,
+      "letterSpacing": 0
+    },
+    "$type": "typography",
+    "type": "typography"
+  },
+  "Section_Title": {
+    "value": {
+      "fontFamily": "Poppins",
+      "fontWeight": 600,
+      "fontSize": 24,
+      "lineHeightPx": 31.19999885559082,
+      "letterSpacing": 0
+    },
+    "$type": "typography",
+    "type": "typography"
+  },
+  "One_Liner___Regular": {
+    "value": {
+      "fontFamily": "Poppins",
+      "fontWeight": 400,
+      "fontSize": 14,
+      "lineHeightPx": 16,
+      "letterSpacing": 0
+    },
+    "$type": "typography",
+    "type": "typography"
+  },
+  "Screen_Title": {
+    "value": {
+      "fontFamily": "Poppins",
+      "fontWeight": 600,
+      "fontSize": 36,
+      "lineHeightPx": 46.79999923706055,
+      "letterSpacing": 0
+    },
+    "$type": "typography",
+    "type": "typography"
+  },
+  "Small___Regular": {
+    "value": {
+      "fontFamily": "Poppins",
+      "fontWeight": 400,
+      "fontSize": 12,
+      "lineHeightPx": 15.59999942779541,
+      "letterSpacing": 0
+    },
+    "$type": "typography",
+    "type": "typography"
+  },
+  "One_Liner___SemiBold": {
+    "value": {
+      "fontFamily": "Poppins",
+      "fontWeight": 600,
+      "fontSize": 14,
+      "lineHeightPx": 16,
+      "letterSpacing": 0
+    },
+    "$type": "typography",
+    "type": "typography"
+  },
+  "Small___SemiBold": {
+    "value": {
+      "fontFamily": "Poppins",
+      "fontWeight": 600,
+      "fontSize": 12,
+      "lineHeightPx": 15.59999942779541,
+      "letterSpacing": 0
+    },
+    "$type": "typography",
+    "type": "typography"
+  },
+  "Extra_Small___SemiBold": {
+    "value": {
+      "fontFamily": "Poppins",
+      "fontWeight": 600,
+      "fontSize": 10,
+      "lineHeightPx": 10,
+      "letterSpacing": 0
+    },
+    "$type": "typography",
+    "type": "typography"
+  }
+}

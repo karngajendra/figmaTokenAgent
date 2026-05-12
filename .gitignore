@@ -1,0 +1,69 @@
+# ── Dependencies ──────────────────────────────────────────
+node_modules/
+.pnp
+.pnp.js
+
+# ── Environment — never commit credentials ─────────────────
+.env
+.env.local
+.env.*.local
+.env.development
+.env.production
+
+# ── Runtime outputs — regenerated each run ────────────────
+tokens/raw/
+tokens/build/
+
+# ── Version cache — local state only ──────────────────────
+.version-cache.json
+
+# ── Node.js logs & diagnostics ────────────────────────────
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+*.log
+
+# ── Package manager lock files (keep one, ignore others) ──
+# Uncomment the ones you don't use:
+# package-lock.json
+# yarn.lock
+# pnpm-lock.yaml
+
+# ── Build / dist outputs ──────────────────────────────────
+dist/
+out/
+build/
+.cache/
+.parcel-cache/
+.turbo/
+.next/
+.nuxt/
+
+# ── OS artifacts ──────────────────────────────────────────
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# ── Editor / IDE ──────────────────────────────────────────
+.idea/
+*.iml
+.vscode/settings.json
+*.swp
+*.swo
+*~
+
+# ── Coverage & test artifacts ─────────────────────────────
+coverage/
+.nyc_output/
+*.lcov
+
+# ── Temporary files ───────────────────────────────────────
+tmp/
+temp/
+*.tmp
+*.bak
