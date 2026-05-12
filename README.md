@@ -41,7 +41,44 @@ git clone <repo-url>
 cd CustomAgent
 ```
 
-### 2. Install dependencies
+### 2. Configure npm proxy _(corporate / behind-firewall environments only)_
+
+If your machine routes outbound traffic through a corporate proxy, tell npm about it **before** running `npm install`. Replace the host and port with your actual proxy address.
+
+```bash
+# HTTP proxy
+npm config set proxy http://proxy.example.com:8080
+
+# HTTPS proxy (required for registry.npmjs.org)
+npm config set https-proxy http://proxy.example.com:8080
+```
+
+Alternatively, set the equivalent environment variables in your shell session (or add them to `.env` for Node.js scripts):
+
+```bash
+export HTTP_PROXY=http://proxy.example.com:8080
+export HTTPS_PROXY=http://proxy.example.com:8080
+# Optional: skip proxy for internal hosts
+export NO_PROXY=localhost,127.0.0.1,.internal.example.com
+```
+
+To verify the current npm proxy settings:
+
+```bash
+npm config get proxy
+npm config get https-proxy
+```
+
+To remove the proxy settings (e.g. when switching to a direct connection):
+
+```bash
+npm config delete proxy
+npm config delete https-proxy
+```
+
+> **Note:** If your proxy uses NTLM/Kerberos authentication (common in Windows corporate environments), consider tools like [px-proxy](https://github.com/genotrance/px) to handle the auth handshake transparently.
+
+### 3. Install dependencies
 
 ```bash
 npm install
@@ -49,7 +86,7 @@ npm install
 
 This installs `style-dictionary`, `dotenv`, and `fs-extra`. All runtime output directories (`tokens/raw/`, `tokens/build/android/`, etc.) are **created automatically** by the scripts on first run — you don't need to create anything manually.
 
-### 3. Create your `.env` file
+### 4. Create your `.env` file
 
 The `.env` file is **gitignored** and must be created manually. It holds your Figma credentials.
 
@@ -248,6 +285,8 @@ The agents are defined in `.github/agents/` and are automatically available in V
 | `0 tokens fetched` | The `FIGMA_FILE_KEY` may be pointing to the wrong file, or the file has no Variables/Styles defined |
 | `tokens/raw/figma-tokens.json not found` | Run `npm run sync-tokens` before `npm run build-tokens` |
 | `tokens/build/android/ is empty` | Run `npm run build-tokens` before `npm run write-foundations` |
+| `npm install` fails / network timeout behind a firewall | Configure the npm proxy — see **Setup step 2** above |
+| Figma API calls fail with `ECONNREFUSED` or `ETIMEDOUT` | Set `HTTP_PROXY` / `HTTPS_PROXY` env vars so Node.js native `fetch` routes through your corporate proxy |
 | Agent not appearing in Copilot Chat | Make sure GitHub Copilot and Copilot Chat extensions are installed and you're signed in |
 | Style Dictionary config error | Check `scripts/style-dictionary/config.js` for platform/transform mismatches |
 
