@@ -47,7 +47,7 @@ cd CustomAgent
 npm install
 ```
 
-This installs `style-dictionary`, `axios`, `dotenv`, and `fs-extra`. All runtime output directories (`tokens/raw/`, `tokens/build/android/`, etc.) are **created automatically** by the scripts on first run — you don't need to create anything manually.
+This installs `style-dictionary`, `dotenv`, and `fs-extra`. All runtime output directories (`tokens/raw/`, `tokens/build/android/`, etc.) are **created automatically** by the scripts on first run — you don't need to create anything manually.
 
 ### 3. Create your `.env` file
 

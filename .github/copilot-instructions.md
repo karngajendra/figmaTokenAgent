@@ -70,7 +70,7 @@ object FigmaColors {
 - Use ES module syntax (`import`/`export`) throughout — `"type": "module"` is set in package.json
 
 ## Copilot Coding Standards (this project)
-- Node.js ≥ 18; use native `fetch` where possible, fall back to `axios`
+- Node.js ≥ 18; use native `fetch` for all HTTP requests (do NOT use axios)
 - Prefer `async/await` over `.then()` chains
 - Validate at system boundaries (env vars missing → throw with helpful message; API errors → log + throw)
 - Do NOT add speculative error handling for internal paths that can't fail
